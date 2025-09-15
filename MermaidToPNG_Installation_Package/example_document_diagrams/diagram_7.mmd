@@ -1,0 +1,10 @@
+graph LR
+    A[Start] --> B{Input Validation}
+    B -->|Valid| C[Process Data]
+    B -->|Invalid| D[Show Error]
+    C --> E{Data Analysis}
+    E -->|Success| F[Generate Report]
+    E -->|Failure| G[Log Error]
+    F --> H[End]
+    D --> H
+    G --> H
